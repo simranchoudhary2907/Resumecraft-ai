@@ -1,25 +1,63 @@
 export default function Features() {
+  const features = [
+    {
+      icon: "⚡",
+      title: "ATS Optimized",
+      desc: "Built to pass applicant tracking systems and improve hiring chances.",
+    },
+    {
+      icon: "👀",
+      title: "Live Preview",
+      desc: "See resume changes instantly while editing.",
+    },
+    {
+      icon: "📄",
+      title: "PDF Export",
+      desc: "Download professional resumes with one click.",
+    },
+    {
+      icon: "🎨",
+      title: "Modern Templates",
+      desc: "Beautiful and recruiter-friendly resume layouts.",
+    },
+  ];
+
   return (
-    <section className="features">
+    <section className="features" id="features">
 
-      <div className="card">
-        <h3>⚡ Live Preview</h3>
-        <p>See changes instantly.</p>
+      <div className="section-title">
+        <span className="section-badge">
+          Why Choose ResumeCraft AI
+        </span>
+
+        <h2>
+          Everything You Need To Build
+          <br />
+          A Winning Resume
+        </h2>
+
+        <p>
+          Powerful tools designed to help students and professionals
+          create resumes faster and smarter.
+        </p>
       </div>
 
-      <div className="card">
-        <h3>📄 PDF Export</h3>
-        <p>Download resumes easily.</p>
-      </div>
+      <div className="feature-grid">
 
-      <div className="card">
-        <h3>📈 Resume Score</h3>
-        <p>Improve resume quality.</p>
-      </div>
+        {features.map((feature, index) => (
+          <div className="feature-card" key={index}>
 
-      <div className="card">
-        <h3>📱 Responsive</h3>
-        <p>Works on all devices.</p>
+            <div className="feature-icon">
+              {feature.icon}
+            </div>
+
+            <h3>{feature.title}</h3>
+
+            <p>{feature.desc}</p>
+
+          </div>
+        ))}
+
       </div>
 
     </section>

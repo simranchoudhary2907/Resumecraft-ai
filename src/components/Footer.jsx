@@ -2,16 +2,16 @@ export default function Footer() {
   return (
     <footer className="footer">
 
-      <h3>Your Full Name</h3>
+      <h3>Simran Choudhary</h3>
 
-      <p>your-email@example.com</p>
+      <p>simranchoudhary2907@gmail.com</p>
 
       <a
         href="https://digitalheroesco.com"
         target="_blank"
         rel="noreferrer"
       >
-        <button>
+        <button className="primary-btn">
           Built for Digital Heroes
         </button>
       </a>
