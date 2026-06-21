@@ -1,10 +1,44 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
+  const [active, setActive] = useState(0);
+
+ const cards = [
+  {
+    name: "Simran Choudhary",
+    role: "Frontend Developer",
+    education: "B.Tech CSE (Data Science)",
+    skills: ["React", "JavaScript", "HTML", "CSS", "Git"],
+    projects: ["ResumeCraft AI", "SIH Project"]
+  },
+  {
+    name: "Aman Kumar",
+    role: "Full Stack Developer",
+    education: "B.Tech CSE",
+    skills: ["MongoDB", "Express", "React", "Node"],
+    projects: ["E-Commerce App", "Chat App"]
+  },
+  {
+    name: "Rahul Sharma",
+    role: "Backend Developer",
+    education: "BCA",
+    skills: ["Node.js", "MySQL", "API"],
+    projects: ["Auth System", "REST API"]
+  },
+  {
+    name: "Priya Verma",
+    role: "UI/UX Designer",
+    education: "B.Des",
+    skills: ["Figma", "UI Design", "Prototyping"],
+    projects: ["Design System", "Portfolio UI"]
+  }
+];
+
   return (
     <section className="hero">
 
-      {/* Left Side */}
+      {/* LEFT SIDE */}
       <div className="hero-left">
 
         <span className="hero-badge">
@@ -12,14 +46,13 @@ export default function Hero() {
         </span>
 
         <h1>
-          Build Professional
-          <br />
+          Build Professional <br />
           Resumes In Minutes
         </h1>
 
         <p>
-          Create ATS-friendly resumes with live preview,
-          modern templates and instant PDF download.
+          Create ATS-friendly resumes with live preview, modern templates
+          and instant PDF download.
         </p>
 
         <div className="hero-buttons">
@@ -38,88 +71,70 @@ export default function Hero() {
 
       </div>
 
-      {/* Right Side */}
-      <div className="hero-right">
+      {/* RIGHT SIDE - STACKED CARDS */}
+     <div className="hero-right">
 
-        {/* Floating Cards */}
-        {/* <div className="floating-card card-1">
-          ATS Score 92%
+  <div className="resume-stack">
+
+    {cards.map((card, index) => (
+      <div
+        key={index}
+        className={`resume-preview ${active === index ? "active" : ""}`}
+        onClick={() => setActive(index)}
+        
+        style={{
+          transform: `
+            translate(${(index - active) * 20}px, ${(index - active) * 15}px)
+            rotateY(${(index - active) * -12}deg)
+            scale(${index === active ? 1.05 : 1 - Math.abs(index - active) * 0.05})
+          `,
+          zIndex: index === active ? 999 : cards.length - index,
+          opacity: Math.abs(index - active) > 2 ? 0.6 : 1
+        }}
+
+//         style={{
+//   transform: `translate(${index * 6}px, ${index * 10}px)`,
+//   zIndex: cards.length - index,
+// }}
+      >
+
+        {/* HEADER */}
+        <div className="resume-header">
+          <h2>{card.name}</h2>
+          <p>{card.role}</p>
         </div>
 
-        <div className="floating-card card-2">
-          PDF Ready
-        </div> */}
-
-        {/* Resume Preview */}
-
-        <div className="resume-preview">
-
-        <div className="resume-top">
-          <h2>Simran Choudhary</h2>
-          <span>Frontend Developer</span>
-        </div>
-
-        <div className="resume-line"></div>
-
-        <div className="resume-block">
+        {/* EDUCATION */}
+        <div className="resume-section">
           <h4>Education</h4>
-          <p>B.Tech CSE (Data Science)</p>
+          <p>{card.education}</p>
         </div>
 
-        <div className="resume-block">
+        {/* SKILLS */}
+        <div className="resume-section">
           <h4>Skills</h4>
-
           <div className="skill-tags">
-            <span>React</span>
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Git</span>
+            {card.skills.map((skill, i) => (
+              <span key={i}>{skill}</span>
+            ))}
           </div>
         </div>
 
-        <div className="resume-block">
+        {/* PROJECTS */}
+        <div className="resume-section">
           <h4>Projects</h4>
-
-          <p>ResumeCraft AI</p>
-          <p>Smart India Hackathon</p>
+          {card.projects.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
 
       </div>
+    ))}
 
-        {/* <div className="resume-preview">
+  </div>
 
-          <div className="resume-header">
-            <h3>Simran Choudhary</h3>
-            <p>Frontend Developer</p>
-          </div>
+</div>
 
-          <div className="resume-section">
-            <h4>Education</h4>
-            <p>B.Tech CSE (Data Science)</p>
-          </div>
-
-          <div className="resume-section">
-            <h4>Skills</h4>
-
-            <div className="skill-tags">
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Git</span>
-            </div>
-          </div>
-
-          <div className="resume-section">
-            <h4>Projects</h4>
-            <p>ResumeCraft AI</p>
-            <p>Smart India Hackathon Project</p>
-          </div>
-
-        </div> */}
-
-      </div>
 
     </section>
   );
