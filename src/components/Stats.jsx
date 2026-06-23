@@ -1,4 +1,4 @@
-import { User, CheckCircle2, CalendarDays } from "lucide-react";
+import { Users, TrendingUp, BriefcaseBusiness } from "lucide-react";
 
 export default function Stats() {
   const logos = [
@@ -12,32 +12,35 @@ export default function Stats() {
 
   const statCards = [
     {
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="12" cy="7" r="4" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      // icon: (
+      //   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      //     <path d="M17 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      //     <circle cx="12" cy="7" r="4" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      //   </svg>
+      // ),
+      icon: <Users size={28} />,
       num: "10K+",
       label: "Resumes Created",
     },
     {
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 17l6-6 4 4 8-8" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      // icon: (
+      //   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      //     <path d="M3 17l6-6 4 4 8-8" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      //   </svg>
+      // ),
+      icon: <TrendingUp size={28} />,
       num: "95%",
       label: "ATS Success Rate",
     },
     {
-      icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="7" width="20" height="14" rx="2" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M16 3v4" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8 3v4" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      ),
+      // icon: (
+      //   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      //     <rect x="2" y="7" width="20" height="14" rx="2" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      //     <path d="M16 3v4" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      //     <path d="M8 3v4" stroke="#4f46e5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+      //   </svg>
+      // ),
+      icon: <BriefcaseBusiness size={28} />,
       num: "500+",
       label: "Interview Calls",
     },
@@ -60,10 +63,13 @@ export default function Stats() {
       <div className="stat-cards">
         {statCards.map((s, i) => (
           <div className="stat-card" key={i}>
+            <div className="stat-top">
             <div className="stat-card-icon">{s.icon}</div>
             <div className="stat-card-num">{s.num}</div>
-            <div className="stat-card-label">{s.label}</div>
+            
           </div>
+          <div className="stat-card-label">{s.label}</div>
+        </div> 
         ))}
       </div>
     </section>

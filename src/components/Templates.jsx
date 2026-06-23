@@ -2,15 +2,19 @@ export default function Templates() {
   const templates = [
     {
       name: "Modern",
-      desc: "Clean ATS-friendly layout",
+      image: "/templates/modern.png",
     },
     {
       name: "Professional",
-      desc: "Corporate recruiter design",
+      image: "/templates/professional.png",
     },
     {
       name: "Minimal",
-      desc: "Simple and elegant resume",
+      image: "/templates/minimal.png",
+    },
+    {
+      name: "Creative",
+      image: "/templates/creative.png",
     },
   ];
 
@@ -18,10 +22,7 @@ export default function Templates() {
     <section className="templates" id="templates">
 
       <div className="section-title">
-
-        <span className="section-badge">
-          Resume Templates
-        </span>
+        <span className="section-badge">Resume Templates</span>
 
         <h2>
           Choose The Perfect
@@ -32,33 +33,40 @@ export default function Templates() {
         <p>
           Professionally designed templates optimized for ATS systems.
         </p>
-
       </div>
 
-      <div className="template-grid">
+      <div className="templates-showcase">
 
-        {templates.map((template, index) => (
-          <div className="template-card" key={index}>
+        <div className="templates-left">
 
-            <div className="template-preview">
+          {templates.map((template, index) => (
+            <div className="template-mini-card" key={index}>
+              <img src={template.image} alt={template.name} />
+              <span>{template.name}</span>
+            </div>
+          ))}
 
-              <div className="preview-header"></div>
+        </div>
 
-              <div className="preview-line"></div>
-              <div className="preview-line short"></div>
+        <div className="templates-right">
 
-              <div className="preview-line"></div>
-              <div className="preview-line short"></div>
+          <div className="preview-window">
 
-              <div className="preview-line"></div>
-
+            <div className="preview-header">
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
 
-            <h3>{template.name}</h3>
-            <p>{template.desc}</p>
+            <img
+              src="/templates/modern.png"
+              alt="Resume Preview"
+              className="main-preview"
+            />
 
           </div>
-        ))}
+
+        </div>
 
       </div>
 

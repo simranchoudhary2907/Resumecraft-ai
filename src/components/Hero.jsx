@@ -76,13 +76,13 @@ export default function Hero() {
         <div className="hero-buttons">
           <Link to="/builder">
             <button className="primary-btn hero-primary">
-              <span className="btn-icon"><StickyNotePlus size={16} /></span>
+              <span className="btn-icon"><StickyNotePlus size={25} /></span>
               <span className="btn-label">Create Resume</span>
             </button>
           </Link>
 
           <a href="#templates" className="secondary-btn hero-secondary">
-            <span className="btn-icon-outline"><Eye size={16} /></span>
+            <span className="btn-icon-outline"><Eye size={30} /></span>
             <span className="btn-label">View Templates</span>
           </a>
         </div>
