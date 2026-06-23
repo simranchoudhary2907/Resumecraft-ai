@@ -1,24 +1,36 @@
+import { Zap, Lightbulb, Eye, FileText, LayoutGrid, Rocket } from "lucide-react";
+
 export default function Features() {
   const features = [
     {
-      icon: "⚡",
+      icon: <Zap size={24} />,
       title: "ATS Optimized",
-      desc: "Built to pass applicant tracking systems and improve hiring chances.",
+      desc: "Our resumes are built to pass ATS systems with ease.",
     },
     {
-      icon: "👀",
+      icon: <Lightbulb size={24} />,
+      title: "AI Suggestions",
+      desc: "Get smart suggestions to improve your resume.",
+    },
+    {
+      icon: <Eye size={24} />,
       title: "Live Preview",
-      desc: "See resume changes instantly while editing.",
+      desc: "See real-time changes as you build your resume.",
     },
     {
-      icon: "📄",
+      icon: <FileText size={24} />,
       title: "PDF Export",
-      desc: "Download professional resumes with one click.",
+      desc: "Download high-quality PDF in one click.",
     },
     {
-      icon: "🎨",
-      title: "Modern Templates",
-      desc: "Beautiful and recruiter-friendly resume layouts.",
+      icon: <LayoutGrid size={24} />,
+      title: "Multiple Templates",
+      desc: "Choose from modern & professional templates.",
+    },
+    {
+      icon: <Rocket size={24} />,
+      title: "Fast & Free",
+      desc: "Build your resume in minutes. Totally free to get started!",
     },
   ];
 
@@ -26,35 +38,20 @@ export default function Features() {
     <section className="features" id="features">
 
       <div className="section-title">
-        <span className="section-badge">
-          Why Choose ResumeCraft AI
-        </span>
-
         <h2>
-          Everything You Need To Build
-          <br />
-          A Winning Resume
+          Why Choose <span className="text-primary">ResumeCraft AI?</span>
         </h2>
-
-        <p>
-          Powerful tools designed to help students and professionals
-          create resumes faster and smarter.
-        </p>
       </div>
 
       <div className="feature-grid">
 
         {features.map((feature, index) => (
           <div className="feature-card" key={index}>
-
-            <div className="feature-icon">
-              {feature.icon}
+            <div className="feature-icon">{feature.icon}</div>
+            <div className="feature-body">
+              <h3>{feature.title}</h3>
+              <p>{feature.desc}</p>
             </div>
-
-            <h3>{feature.title}</h3>
-
-            <p>{feature.desc}</p>
-
           </div>
         ))}
 
