@@ -4,7 +4,7 @@ import Features from "../components/Features";
 import Stats from "../components/Stats";
 import Templates from "../components/Templates";
 import HowItWorks from "../components/HowItWorks";
-import CTA from "../components/CTA";
+// import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <Stats />
       <Features />
       <HowItWorks />
-      <CTA />
+      {/* <CTA /> */}
       <Templates />
       <Footer />
     </>

@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="nav-inner">
 
         <div className="nav-left">
-          <div className="logo">
+          <Link to="/" className="logo">
            <div className="logo-icon">
               <FileUser size={24} />
             </div>
@@ -25,7 +25,7 @@ export default function Navbar() {
               <span className="logo-accent">Craft</span>
               <span className="logo-bold">&nbsp;AI</span>
             </div>
-          </div>
+          </Link>
         </div>
 
         <button

@@ -1,13 +1,23 @@
+import Navbar from "../components/Navbar";
 import { useState } from "react";
+import {
+  Sparkles,
+  User,
+  Mail,
+  Phone,
+  GraduationCap,
+  Code
+} from "lucide-react";
 
 export default function Builder() {
+  const [template, setTemplate] = useState("modern");
 
   const [resume, setResume] = useState({
     name: "",
     email: "",
     phone: "",
-    skills: "",
-    education: ""
+    education: "",
+    skills: ""
   });
 
   const handleChange = (e) => {
@@ -18,91 +28,112 @@ export default function Builder() {
   };
 
   return (
-    <div className="builder">
+    <>
+      <Navbar />
 
-      {/* LEFT FORM */}
+      <div className="editor">
 
-      <div className="builder-form">
+        {/* LEFT PANEL */}
+        <div className="editor-left">
 
-        <h2>Resume Details</h2>
+          <h2 className="logo">ResumeCraft AI ✨</h2>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          onChange={handleChange}
-        />
+          {/* TEMPLATES */}
+          <div className="section">
+            <h4><Sparkles size={14} /> Templates</h4>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          onChange={handleChange}
-        />
+            <button
+              className={template === "modern" ? "active" : ""}
+              onClick={() => setTemplate("modern")}
+            >
+              Modern
+            </button>
 
-        <input
-          type="text"
-          name="phone"
-          placeholder="Phone Number"
-          onChange={handleChange}
-        />
+            <button
+              className={template === "classic" ? "active" : ""}
+              onClick={() => setTemplate("classic")}
+            >
+              Classic
+            </button>
 
-        <textarea
-          name="education"
-          placeholder="Education"
-          rows="4"
-          onChange={handleChange}
-        />
+            <button
+              className={template === "minimal" ? "active" : ""}
+              onClick={() => setTemplate("minimal")}
+            >
+              Minimal
+            </button>
+          </div>
 
-        <textarea
-          name="skills"
-          placeholder="Skills (React, JS, Python...)"
-          rows="4"
-          onChange={handleChange}
-        />
+          {/* PERSONAL */}
+          <div className="section">
+            <h4><User size={14} /> Personal Info</h4>
 
-        <button className="primary-btn">
-          Download PDF
-        </button>
+            <input
+              name="name"
+              placeholder="Full Name"
+              onChange={handleChange}
+            />
 
-      </div>
+            <input
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+            />
 
-      {/* RIGHT PREVIEW */}
+            <input
+              name="phone"
+              placeholder="Phone"
+              onChange={handleChange}
+            />
+          </div>
 
-      <div className="builder-preview">
+          {/* EDUCATION */}
+          <div className="section">
+            <h4><GraduationCap size={14} /> Education</h4>
 
-        <div className="preview-paper">
+            <textarea
+              name="education"
+              rows="3"
+              onChange={handleChange}
+            />
+          </div>
 
-          <h1>
-            {resume.name || "Your Name"}
-          </h1>
+          {/* SKILLS */}
+          <div className="section">
+            <h4><Code size={14} /> Skills</h4>
 
-          <p>
-            {resume.email || "your@email.com"}
-          </p>
+            <textarea
+              name="skills"
+              rows="3"
+              onChange={handleChange}
+            />
+          </div>
 
-          <p>
-            {resume.phone || "+91 XXXXX XXXXX"}
-          </p>
+        </div>
 
-          <hr />
+        {/* RIGHT CANVAS */}
+        <div className="editor-right">
 
-          <h3>Education</h3>
+          <div className={`resume-canvas ${template}`}>
 
-          <p>
-            {resume.education || "Your education details"}
-          </p>
+            <h1>{resume.name || "Your Name"}</h1>
 
-          <h3>Skills</h3>
+            <p>{resume.email || "your@email.com"}</p>
+            <p>{resume.phone || "+91 XXXXX XXXXX"}</p>
 
-          <p>
-            {resume.skills || "React, JavaScript, HTML, CSS"}
-          </p>
+            <hr />
+
+            <h3>Education</h3>
+            <p>{resume.education || "Your education details"}</p>
+
+            <h3>Skills</h3>
+            <p>{resume.skills || "React, JavaScript, CSS"}</p>
+
+          </div>
 
         </div>
 
       </div>
-
-    </div>
+    </>
   );
 }

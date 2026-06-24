@@ -23,7 +23,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="how-it-works">
+    <section className="how-it-works" id="about">
 
       <div className="section-title">
         <span className="section-badge">
