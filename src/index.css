@@ -224,7 +224,7 @@ html { scroll-behavior: smooth; }
 /* ================= HERO ================= */
 
 .hero {
-  min-height: 115vh;
+  min-height: 100vh;
   /* transform: translateY(-20px); */
   /* min-height: calc(100vh - 72px); */
   display: flex;
@@ -235,7 +235,7 @@ html { scroll-behavior: smooth; }
   gap: 40px;
   position: relative;
   overflow: hidden;
-  margin-top: -20px;
+  margin-top: 0px;
 }
 
 .hero::before {
@@ -289,7 +289,8 @@ html { scroll-behavior: smooth; }
 
 .hero-left h1 {
   margin-top: 20px;
-  font-size: clamp(3rem, 4vw, 4.4rem);
+  /* font-size: clamp(3rem, 4vw, 4.4rem); */
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
   font-weight: 800;
   line-height: 1.02;
   color: #111827;
@@ -431,13 +432,13 @@ html { scroll-behavior: smooth; }
 }
 
 .hero-title {
-  transition: all 0.4s ease;
-  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .hero-title:hover {
-  transform: translateY(-5px);
-  text-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+  transform: scale(1.03);
+  color: #302f31;
 }
 
 
@@ -496,7 +497,7 @@ html { scroll-behavior: smooth; }
   align-items: center;
   position: relative;
   /* shift the right preview stack up toward the navbar */
-  transform: translateY(-40px);
+  transform: translateY(0);
   z-index: 4;
 }
 
@@ -1415,18 +1416,45 @@ html { scroll-behavior: smooth; }
 }
 
 /* ========== CANVAS ========== */
-.canvas {
+/* .canvas {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+} */
+
+.canvas {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.resumeContainer {
+  width: 100%;
+  height: calc(100vh - 140px);
+
+  overflow: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 30px;
+  padding-bottom: 100px;
 }
 
 /* resume page */
+
+/* .resumeWrapper {
+  transition: 0.2s;
+} */
+
 .resumeWrapper {
   transition: 0.2s;
+  min-width: fit-content;
 }
 
 /* RESUME */
@@ -1454,7 +1482,8 @@ html { scroll-behavior: smooth; }
 }
 
 /* FOOTER BAR */
-.footerBar {
+
+/* .footerBar {
   position: absolute;
   bottom: 0;
 
@@ -1469,6 +1498,27 @@ html { scroll-behavior: smooth; }
   align-items: center;
 
   padding: 0 20px;
+} */
+
+.footerBar {
+  position: fixed;
+
+  bottom: 0;
+  left: 420px; /* 80 sidebar + 340 panel */
+
+  right: 0;
+  height: 65px;
+
+  background: white;
+  border-top: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 20px;
+
+  z-index: 1000;
 }
 
 /* ZOOM */
@@ -1729,6 +1779,6 @@ html { scroll-behavior: smooth; }
   border-right:1px solid #8a8a8b;
 }
 
-/* .hero-stats .stat{display:flex;flex-direction:column}; */
+/* -stats .stat{display:flex;flex-direction:column}; */
 .hero-stats .stat-num{font-weight:800;color:var(--text);font-size:18px}
 .hero-stats .stat-label{color:var(--muted);font-size:13px}

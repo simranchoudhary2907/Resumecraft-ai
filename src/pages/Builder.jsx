@@ -21,7 +21,7 @@ export default function Builder() {
     { id: "modern", name: "Modern", image: "/templates/modern.png" },
     { id: "minimal", name: "Minimal", image: "/templates/minimal.png" },
     { id: "professional", name: "Professional", image: "/templates/professional.png" },
-    { id: "creative", name: "Creative", image: "/templates/creative.png" },
+    // { id: "creative", name: "Creative", image: "/templates/creative.png" },
     { id: "clean", name: "Clean", image: "/templates/clean.png" },
     // { id: "corporate", name: "Corporate", image: "/templates/corporate.png" },
     // { id: "elegant", name: "Elegant", image: "/templates/elegant.png" },
@@ -112,17 +112,17 @@ export default function Builder() {
         </div>
 
         {/* CANVAS AREA */}
-        <div className="canvas">
+        {/* <div className="canvas">
 
           <div
             className="resumeWrapper"
             style={{ transform: `scale(${zoom / 100})` }}
           >
             <ResumePreview />
-          </div>
+          </div> */}
 
           {/* FOOTER TOOLBAR */}
-          <div className="footerBar">
+          {/* <div className="footerBar">
             <div className="zoom">
               <button onClick={() => setZoom((z) => Math.max(50, z - 5))}>-</button>
               <span>{zoom}%</span>
@@ -140,7 +140,45 @@ export default function Builder() {
             </div>
           </div>
 
-        </div>
+        </div> */}
+
+{/* CANVAS AREA */}
+<div className="canvas">
+
+  {/* Resume Preview Area */}
+  <div className="resumeContainer">
+    <div
+      className="resumeWrapper"
+      style={{
+        transform: `scale(${zoom / 100})`,
+        transformOrigin: "top center",
+      }}
+    >
+      <ResumePreview />
+    </div>
+  </div>
+
+  {/* FIXED TOOLBAR */}
+  <div className="footerBar">
+    <div className="zoom">
+      <button onClick={() => setZoom((z) => Math.max(50, z - 5))}>-</button>
+      <span>{zoom}%</span>
+      <button onClick={() => setZoom((z) => Math.min(120, z + 5))}>+</button>
+    </div>
+
+    <div className="pages">
+      <button>Pages 1/1</button>
+      <button className="add">+ Add page</button>
+    </div>
+
+    <div className="rightTools">
+      <button>⤢</button>
+      <button>⬇</button>
+    </div>
+  </div>
+
+</div>
+
       </div>
     </>
   );
