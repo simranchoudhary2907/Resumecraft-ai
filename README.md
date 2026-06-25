@@ -1,67 +1,109 @@
 # ResumeCraft AI 🚀
 
-A modern AI-powered Resume Builder built with React and Vite that helps users create professional, ATS-friendly resumes through an intuitive and responsive interface.
+A modern and responsive AI-inspired Resume Builder built with React and Vite that helps users create professional, ATS-friendly resumes through an intuitive editing experience and live preview interface.
+
+![React](https://img.shields.io/badge/React-19-blue)
+![Vite](https://img.shields.io/badge/Vite-Frontend-purple)
+![Deployment](https://img.shields.io/badge/Deployment-Vercel-black)
+
+---
 
 ## 🌐 Live Demo
 
-https://resumecraftai-nine.vercel.app
+**Website:** https://resumecraftai-nine.vercel.app
 
-## 📂 GitHub Repository
+## 💻 GitHub Repository
 
-https://github.com/simranchoudhary2907/Resumecraft-ai
-
----
-
-## 📖 Overview
-
-ResumeCraft AI is a modern resume-building platform designed to help users create clean, professional, and ATS-friendly resumes quickly. The application provides multiple resume templates, live preview functionality, zoom controls, and a user-friendly editing experience.
+**Repository:** https://github.com/simranchoudhary2907/Resumecraft-ai
 
 ---
 
-## ✨ Features
+# 📖 Project Overview
 
-* Modern and responsive UI
-* ATS-friendly resume templates
-* Multiple resume design options
-* Real-time resume preview
-* Zoom in / Zoom out functionality
-* Professional landing page
-* Template selection system
-* Personal information editor
-* Education and skills sections
-* Mobile-friendly design
-* Fast deployment using Vercel
+ResumeCraft AI is a modern web application that enables users to create professional resumes using a clean and interactive interface.
+
+The platform provides multiple resume templates, real-time preview functionality, zoom controls, and a user-friendly editing experience designed to simplify resume creation.
+
+This project was developed as part of a Web Development Internship Assessment and demonstrates modern frontend development practices using React and Vite.
 
 ---
 
-## 🛠️ Tech Stack
+# ✨ Key Features
 
-### Frontend
+### 📝 Resume Builder
+
+* Edit personal information
+* Add education details
+* Add skills and qualifications
+* Live content updates
+
+### 🎨 Multiple Resume Templates
+
+* Modern Template
+* Minimal Template
+* Professional Template
+* Creative Template
+* Clean Template
+
+### 👀 Live Resume Preview
+
+* Real-time preview updates
+* Instant content reflection
+* Professional layout rendering
+
+### 🔍 Zoom Controls
+
+* Zoom In functionality
+* Zoom Out functionality
+* Improved resume viewing experience
+
+### 📱 Responsive Design
+
+* Mobile-friendly layout
+* Tablet compatibility
+* Desktop optimized experience
+
+### 🎯 Modern Landing Page
+
+* Hero section
+* Features section
+* Statistics section
+* Resume templates showcase
+* How It Works section
+* Professional footer
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
 
 * React.js
 * Vite
 * JavaScript (ES6+)
 * CSS3
 
-### UI & Icons
+## UI Components
 
-* Lucide React
+* Lucide React Icons
 
-### Deployment
+## Deployment
 
 * Vercel
 
-### Version Control
+## Version Control
 
-* Git & GitHub
+* Git
+* GitHub
 
 ---
 
-## 📁 Project Structure
+# 📂 Project Structure
 
 ```text
-src/
-├── components/
+src
+│
+├── components
 │   ├── Navbar.jsx
 │   ├── Hero.jsx
 │   ├── Features.jsx
@@ -70,43 +112,44 @@ src/
 │   ├── HowItWorks.jsx
 │   └── Footer.jsx
 │
-├── pages/
+├── pages
 │   ├── Home.jsx
 │   └── Builder.jsx
 │
-├── assets/
-│
 ├── App.jsx
-└── main.jsx
+├── main.jsx
+└── index.css
 ```
 
-## 🚀 Installation
+---
 
-Clone the repository:
+# 🚀 Getting Started
+
+### Clone Repository
 
 ```bash
 git clone https://github.com/simranchoudhary2907/Resumecraft-ai.git
 ```
 
-Move into the project directory:
+### Navigate to Project
 
 ```bash
 cd Resumecraft-ai
 ```
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+### Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Build for production:
+### Build for Production
 
 ```bash
 npm run build
@@ -114,35 +157,43 @@ npm run build
 
 ---
 
-## 🎯 Future Improvements
+# 🎯 Future Enhancements
 
-* AI-powered resume suggestions
-* Resume export as PDF
-* User authentication
-* Cloud storage integration
-* Drag-and-drop section management
-* Resume analytics and ATS scoring
+* Resume PDF Export
+* AI-powered Resume Suggestions
+* ATS Score Checker
+* User Authentication
+* Resume Download Feature
+* Additional Premium Templates
+* Drag-and-Drop Resume Sections
 
 ---
 
-## 👩‍💻 Developer
+# 👩‍💻 Developer
 
-**Simran Choudhary**
+### Simran Kumari
 
-Email: [simranchoudhary2907@gmail.com](mailto:simranchoudhary2907@gmail.com)
+Frontend Developer
 
 GitHub:
 https://github.com/simranchoudhary2907
 
-LinkedIn:
-(Add your LinkedIn profile link here)
+Email:
+[simranchoudhary2907@gmail.com](mailto:simranchoudhary2907@gmail.com)
 
 ---
 
-## 📜 License
+# 📌 Internship Project
 
-This project was created as part of a Web Development Internship Assessment and is intended for educational and portfolio purposes.
+This project was created as part of a Web Development Internship Assessment and demonstrates:
+
+* React Development
+* Component-Based Architecture
+* Responsive UI Design
+* Modern Frontend Practices
+* Deployment Workflow
+* Git & GitHub Usage
 
 ---
 
-⭐ If you like this project, consider giving it a star on GitHub.
+⭐ If you found this project useful, consider giving it a star on GitHub.
