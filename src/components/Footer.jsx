@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div className="avatar">S</div>
 
-        <h2>Simran Choudhary</h2>
+        <h2>Simran Kumari</h2>
 
         <p className="email">
           simranchoudhary2907@gmail.com
@@ -116,7 +116,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © 2025 Simran Choudhary. All rights reserved. 💜
+        © 2025 Simran Kumari. All rights reserved. 💜
       </div>
 
     </footer>
