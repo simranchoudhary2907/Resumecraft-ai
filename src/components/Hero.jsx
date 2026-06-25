@@ -62,7 +62,7 @@ export default function Hero() {
           ATS-Friendly Resume Builder
         </span>
 
-        <h1>
+        <h1 className="hero-title">
           Build <span className="highlight"> <br></br> ATS-Friendly</span>
           <br />
           Resumes That Get Interviews
