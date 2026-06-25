@@ -116,7 +116,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © 2025 Simran Kumari. All rights reserved. 💜
+        © 2025 Simran Kumari. All rights reserved.💜
       </div>
 
     </footer>
